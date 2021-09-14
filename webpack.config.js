@@ -79,6 +79,7 @@ module.exports = (env, argv) => ({
             template: path.resolve(__dirname, 'src/index.html'), // template file
             filename: 'index.html', // output file
         }),
+        // @ts-ignore
         new StylelintPlugin({ configFile: './.stylelintrc', context: 'src', files: '**/*.scss' }),
     ],
     devtool: argv.mode === 'production' ? 'none' : 'eval-source-map',
